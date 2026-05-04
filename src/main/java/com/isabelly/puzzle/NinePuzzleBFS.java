@@ -8,16 +8,15 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
-public class EightPuzzleBFS {
+public class NinePuzzleBFS {
 
     // -------------------------------------------------------------------------
     // ESTADO OBJETIVO
-    // Toda solução do 8-puzzle termina nesta configuração.
     // -------------------------------------------------------------------------
     static final int[][] GOAL = {
         {1, 2, 3},
         {4, 5, 6},
-        {7, 8, 0}   // 0 representa o espaço em branco
+        {7, 8, 0}
     };
  
     // -------------------------------------------------------------------------
@@ -115,7 +114,6 @@ public class EightPuzzleBFS {
     // =========================================================================
  
     // Converte o tabuleiro em uma string única para usar no Set
-    // Ex: [[1,2,3],[4,5,6],[7,8,0]] → "1,2,3,4,5,6,7,8,0"
     static String boardToKey(int[][] b) {
         StringBuilder sb = new StringBuilder();
         for (int[] row : b)
